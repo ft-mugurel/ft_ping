@@ -2,11 +2,16 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
+INCLUDE_DIR = include
+CFLAGS += -I$(INCLUDE_DIR)
+
 # Target file
 NAME = ft_ping
 
 # Source files
-SRCS = ft_ping.c
+SRCS = ./src/ft_ping.c \
+			 ./src/pars.c
+
 
 # Object files
 OBJS = $(SRCS:.c=.o)
